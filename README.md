@@ -1,2 +1,2 @@
-# LibraryAttendanceProgram
+#LibraryAttendanceProgram
 This project is the source code for the DCHS Library Attendance application, made for the exclusive use of the Dublin Coffman High School Library, unless proper permission is requested.  This project is an attendance program that logs how frequently students visit the library on a weekly basis. It requires only a student ID as an input and outputs tables of the students who have visited and the amount of times he/she visited.
