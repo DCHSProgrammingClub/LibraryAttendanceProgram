@@ -40,4 +40,17 @@ function close() {
 		global $connection;
 		$connection->close();
 }
+
+function test() {
+		echo 'Included<br />';
+		connect();
+		echo 'Connected<br />';
+		echo 'Echod connection<br />';
+		echo mysqli_num_rows(query('SELECT * FROM `users`'));
+		echo '<br />';
+		show(query('SELECT * FROM `users`'));
+		echo '<br />Queried';
+		close();
+}
+
 ?>

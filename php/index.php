@@ -1,20 +1,22 @@
 <?php error_reporting(-1); ?>
 <?php ini_set('display_errors', true); ?>
-
 <?php
-
-//phpinfo();
-
-
 include('private/database.php');
-echo 'Included<br />';
-connect();
-echo 'Connected<br />';
 
-echo 'Echod connection<br />';
-echo mysqli_num_rows(query('SELECT * FROM `users`'));
-echo '<br />';
-show(query('SELECT * FROM `users`'));
-echo '<br />Queried';
 
-close();
+
+?>
+
+<html>
+	<head>
+		<title>Library Login</title>
+	</head>
+	<body>
+		<center>
+			<h3>Login</h3>
+			<form method='get'>
+				<input type='text' name='id' />
+				<input type='submit' />
+		</center>
+	</body>
+</html>
