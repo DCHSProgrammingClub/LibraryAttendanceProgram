@@ -1,5 +1,5 @@
 <?php
-	$connect = mysqli_connect('localhost', 'LoginUser', "", 'dchslibrary');
+	$connect = mysqli_connect('localhost', 'root', "", 'root');
 
 	if(!$connect)
 	{
@@ -13,7 +13,7 @@
 	if(mysqli_num_rows($result) != 0)
 	{
 		$row = mysqli_fetch_assoc($result);
-		$num = $row["Number_Of_Visits"] + 1;
+	$num = $row["Number_Of_Visits"] + 1;
 		$sql = "UPDATE `studentattendance` SET `Number_Of_Visits`=".$num." WHERE `Student_ID`=".$id;
 		mysqli_query($connect , $sql);
 	}

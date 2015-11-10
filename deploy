@@ -4,5 +4,5 @@ if [ `id -u` != 0 ] ; then
     echo "Permission denied, run as root"
     exit
 fi
-`cp -r php/ /var/www`
+`cp -r php/* /var/www`
 echo "Application deployed"
