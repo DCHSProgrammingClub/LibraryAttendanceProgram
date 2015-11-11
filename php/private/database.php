@@ -16,6 +16,7 @@ function connect() {
 function query($sql) {
 		global $connection;
 		if(!$connection) {
+				throw new Exception('Query without connection');
 				die('Trying to query without database connection');
 		}
 		$result = $connection->query($sql);
@@ -39,6 +40,7 @@ function show($result) {
 function close() {
 		global $connection;
 		$connection->close();
+		$connection = null;
 }
 
 function test() {
@@ -51,6 +53,10 @@ function test() {
 		show(query('SELECT * FROM `users`'));
 		echo '<br />Queried';
 		close();
+}
+
+function free($result) {
+		mysqli_free_result($result);
 }
 
 ?>
