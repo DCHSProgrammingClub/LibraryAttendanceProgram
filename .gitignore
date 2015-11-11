@@ -1,0 +1,7 @@
+#Swap files
+
+*.swp
+
+#HT Accsess files
+
+.htaccess
